@@ -725,7 +725,7 @@
                 </option>
                 <option>
                     <name>OutputFile</name>
-                    <state>fatorial.d43</state>
+                    <state>fibonacci.d43</state>
                 </option>
                 <option>
                     <name>OutputFormat</name>
@@ -2236,6 +2236,6 @@
         </settings>
     </configuration>
     <file>
-        <name>$PROJ_DIR$\fatorial.asm</name>
+        <name>$PROJ_DIR$\fibonacci.asm</name>
     </file>
 </project>

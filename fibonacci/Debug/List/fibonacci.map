@@ -1,24 +1,24 @@
 ###############################################################################
 #
-# IAR UBROF Linker V10.12.4.1422                          04/Sep/2023  10:10:38
+# IAR UBROF Linker V10.12.4.1422                          10/Sep/2023  19:35:47
 # Copyright 1987-2022 IAR Systems AB.
 #
 #    Target Cpu    =  MSP430
 #    Map file      =
-#        C:\Users\ejoao\OneDrive\Desktop\fatorial_ws\fatorial\Debug\List\fatorial.map
+#        C:\Users\ejoao\OneDrive\Desktop\fib_ws\fibonacci\Debug\List\fibonacci.map
 #    Output file 1 =
-#        C:\Users\ejoao\OneDrive\Desktop\fatorial_ws\fatorial\Debug\Exe\fatorial.d43
+#        C:\Users\ejoao\OneDrive\Desktop\fib_ws\fibonacci\Debug\Exe\fibonacci.d43
 #                  =  Format: debug
 #                  =  UBROF version 11.1.1
 #                  =  Using library modules for C-SPY (-rt)
 #    Command line  =
 #        -f
-#        C:\Users\ejoao\OneDrive\Desktop\fatorial_ws\fatorial\Debug\Exe\fatorial.d43.rsp
-#        (C:\Users\ejoao\OneDrive\Desktop\fatorial_ws\fatorial\Debug\Obj\fatorial.r43
+#        C:\Users\ejoao\OneDrive\Desktop\fib_ws\fibonacci\Debug\Exe\fibonacci.d43.rsp
+#        (C:\Users\ejoao\OneDrive\Desktop\fib_ws\fibonacci\Debug\Obj\fibonacci.r43
 #        --output
-#        C:\Users\ejoao\OneDrive\Desktop\fatorial_ws\fatorial\Debug\Exe\fatorial.d43
+#        C:\Users\ejoao\OneDrive\Desktop\fib_ws\fibonacci\Debug\Exe\fibonacci.d43
 #        -l
-#        C:\Users\ejoao\OneDrive\Desktop\fatorial_ws\fatorial\Debug\List\fatorial.map
+#        C:\Users\ejoao\OneDrive\Desktop\fib_ws\fibonacci\Debug\List\fibonacci.map
 #        -xaems "-IC:\Program Files\IAR Systems\Embedded Workbench
 #        9.1\430\lib\\" --f "C:\Program Files\IAR Systems\Embedded Workbench
 #        9.1\430\config\linker\lnk430g2553.xcl" (-cmsp430 -QCODE_I=CODE_ID
@@ -101,16 +101,17 @@ __program_start            0xC000  Pub         ?cstart [2]
 ?cstart_call_main          0xC004  Pub         ?cstart [2]
 main                       0xC00C  Pub         main [0]
 ?cstart_end                0xC00C  Pub         ?cstart [2]
-mainloop                   0xC01A  Loc         main [0]
-delay                      0xC01E  Loc         main [0]
-return                     0xC022  Loc         main [0]
-__exit                     0xC028  Pub   Code  ?__exit [2]
-_exit                      0xC03A  Pub   Code  ?_exit [2]
-exit                       0xC03E  Pub   Code  ?exit [2]
-__DebugBreak               0xC042  Pub   Code  ?__dbg_break [2]
+fib                        0xC038  Loc         main [0]
+reset                      0xC048  Loc         main [0]
+fibtwo                     0xC05C  Loc         main [0]
+diff                       0xC06A  Loc         main [0]
+__exit                     0xC072  Pub   Code  ?__exit [2]
+_exit                      0xC084  Pub   Code  ?_exit [2]
+exit                       0xC088  Pub   Code  ?exit [2]
+__DebugBreak               0xC08C  Pub   Code  ?__dbg_break [2]
 ?reset_vector              0xFFFE  Pub         ?reset_vector [2]
 
-[0] = C:\Users\ejoao\OneDrive\Desktop\fatorial_ws\fatorial\Debug\Obj\fatorial.r43
+[0] = C:\Users\ejoao\OneDrive\Desktop\fib_ws\fibonacci\Debug\Obj\fibonacci.r43
 [1] = Command line (linker generated)
 [2] = C:\Program Files\IAR Systems\Embedded Workbench 9.1\430\lib\dlib\dl430fn.r43
 
@@ -132,18 +133,19 @@ Linker generated:
         _DATA16_HEAP_SIZE  0x0050  Pub
         _STACK_SIZE        0x0050  Pub
 **************************************************************
-File: C:\Users\ejoao\OneDrive\Desktop\fatorial_ws\fatorial\Debug\Obj\fatorial.r43
+File: C:\Users\ejoao\OneDrive\Desktop\fib_ws\fibonacci\Debug\Obj\fibonacci.r43
   Module: main
        Segment part 0, CSTACK [root]
        Address:  0x03B0 Size: 0x0 Align: 2(1)
     --------------------------------------------------
        Segment part 1, <CODE> 1 [root]
                       (was CODE)
-       Address:  0xC00C Size: 0x1C Align: 2(1)
+       Address:  0xC00C Size: 0x66 Align: 2(1)
       main                 0xC00C  Pub  Ref by:   Segment part 19 (?cstart)
-      mainloop             0xC01A  Loc
-      delay                0xC01E  Loc
-      return               0xC022  Loc
+      reset                0xC048  Loc
+      fib                  0xC038  Loc
+      diff                 0xC06A  Loc
+      fibtwo               0xC05C  Loc
 
       Absolute module symbols:
         __MSP430G2203__  0x0000  Loc
@@ -154,16 +156,16 @@ File: C:\Program Files\IAR Systems\Embedded Workbench 9.1\430\lib\dlib\dl430fn.r
   Module: ?__dbg_break
        Segment part 2, <CODE> 1
                       (was CODE)
-       Address:  0xC042 Size: 0x2 Align: 2(1)
-      __DebugBreak         0xC042  Pub  Ref by:   __exit (?__exit)
+       Address:  0xC08C Size: 0x2 Align: 2(1)
+      __DebugBreak         0xC08C  Pub  Ref by:   __exit (?__exit)
   ============================================================
   Module: ?__dwrite
   ============================================================
   Module: ?__exit
        Segment part 2, <CODE> 1
                       (was CODE)
-       Address:  0xC028 Size: 0x12 Align: 2(1)
-      __exit               0xC028  Pub  Ref by:   Segment part 6 (?_exit)
+       Address:  0xC072 Size: 0x12 Align: 2(1)
+      __exit               0xC072  Pub  Ref by:   Segment part 6 (?_exit)
                                                   _exit (?_exit)
   ============================================================
   Module: ?__write
@@ -171,12 +173,12 @@ File: C:\Program Files\IAR Systems\Embedded Workbench 9.1\430\lib\dlib\dl430fn.r
   Module: ?_exit
        Segment part 0, <CODE> 1
                       (was CODE)
-       Address:  0xC03A Size: 0x0 Align: 2(1)
-      _exit                0xC03A  Pub  Ref by:   exit (?exit)
+       Address:  0xC084 Size: 0x0 Align: 2(1)
+      _exit                0xC084  Pub  Ref by:   exit (?exit)
     --------------------------------------------------
        Segment part 6, <CODE> 1
                       (was CODE)
-       Address:  0xC03A Size: 0x4 Align: 2(1)
+       Address:  0xC084 Size: 0x4 Align: 2(1)
        Ref by:   _exit
   ============================================================
   Module: ?cppinit
@@ -209,8 +211,8 @@ File: C:\Program Files\IAR Systems\Embedded Workbench 9.1\430\lib\dlib\dl430fn.r
   Module: ?exit
        Segment part 2, <CODE> 1
                       (was CODE)
-       Address:  0xC03E Size: 0x4 Align: 2(1)
-      exit                 0xC03E  Pub  Ref by:   Segment part 19 (?cstart)
+       Address:  0xC088 Size: 0x4 Align: 2(1)
+      exit                 0xC088  Pub  Ref by:   Segment part 19 (?cstart)
   ============================================================
   Module: ?FrwpInit
   ============================================================
@@ -243,11 +245,11 @@ SEGMENT   SPACE    START/END ADDRESS    SIZE  TYPE  ALIGN
 -------   -----  ---------------------  ----  ----  -----
 CSTACK              0x03B0 - 0x03FF     0x50   rel   2(1)
 CSTART              0xC000 - 0xC00B      0xC   rel   2(1)
-<CODE> 1            0xC00C - 0xC043     0x38   rel   2(1)
+<CODE> 1            0xC00C - 0xC08D     0x82   rel   2(1)
 RESET               0xFFFE - 0xFFFF      0x2   rel   2(1)
 
- 70 bytes of CODE memory
- 80 bytes of DATA memory
+ 144 bytes of CODE memory
+  80 bytes of DATA memory
 
 Errors: none
 Warnings: none

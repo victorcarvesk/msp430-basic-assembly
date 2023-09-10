@@ -18,7 +18,7 @@
                     <analyzeTimeoutEnabled>1</analyzeTimeoutEnabled>
                     <analyzeTimeout>600</analyzeTimeout>
                     <enableParallel>1</enableParallel>
-                    <parallelThreads>4</parallelThreads>
+                    <parallelThreads>2</parallelThreads>
                     <enableFalsePositives>0</enableFalsePositives>
                     <messagesLimitEnabled>1</messagesLimitEnabled>
                     <messagesLimit>100</messagesLimit>
@@ -1332,7 +1332,7 @@
                     <analyzeTimeoutEnabled>1</analyzeTimeoutEnabled>
                     <analyzeTimeout>600</analyzeTimeout>
                     <enableParallel>1</enableParallel>
-                    <parallelThreads>4</parallelThreads>
+                    <parallelThreads>2</parallelThreads>
                     <enableFalsePositives>0</enableFalsePositives>
                     <messagesLimitEnabled>1</messagesLimitEnabled>
                     <messagesLimit>100</messagesLimit>
@@ -2630,6 +2630,6 @@
         </settings>
     </configuration>
     <file>
-        <name>$PROJ_DIR$\fatorial.asm</name>
+        <name>$PROJ_DIR$\fibonacci.asm</name>
     </file>
 </project>

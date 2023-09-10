@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Users\ejoao\OneDrive\Desktop\fatorial_ws\fatorial\settings\fatorial.Debug.general.xcl" --backend -f "C:\Users\ejoao\OneDrive\Desktop\fatorial_ws\fatorial\settings\fatorial.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Users\ejoao\OneDrive\Desktop\fib_ws\fibonacci\settings\fibonacci.Debug.general.xcl" --backend -f "C:\Users\ejoao\OneDrive\Desktop\fib_ws\fibonacci\settings\fibonacci.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Users\ejoao\OneDrive\Desktop\fatorial_ws\fatorial\settings\fatorial.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\ejoao\OneDrive\Desktop\fatorial_ws\fatorial\settings\fatorial.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Users\ejoao\OneDrive\Desktop\fib_ws\fibonacci\settings\fibonacci.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\ejoao\OneDrive\Desktop\fib_ws\fibonacci\settings\fibonacci.Debug.driver.xcl" 
 
 @echo off 
 :end

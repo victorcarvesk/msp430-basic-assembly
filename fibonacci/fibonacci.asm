@@ -7,7 +7,7 @@
         RSEG    CSTACK                  ; Define o segmento CSTACK para a pilha
         RSEG    CODE                    ; Define o segmento CODE para o código
 
-main:   MOV.W   #WDTPW+WDTHOLD,&WDTCTL  ; Para o watchdog timer
+main:   MOV   #WDTPW+WDTHOLD,&WDTCTL    ; Para o watchdog timer
 
         MOV #6, R4                      ; Inicializa R4 com o valor 6
         MOV #8, R5                      ; Inicializa R5 com o valor 8
@@ -30,10 +30,10 @@ fib:    MOV R6, R8                      ; Move R6 para R8
         DEC R4                          ; Decrementa R4
         JNZ fib                         ; Se R4 não for zero, volte para 'fib'
         MOV R7, R4                      ; Move R7 para R4
-        JMP reset                       ; Salta para 'reset'
 
-reset:  MOV.B #1, R6                    ; Inicializa R6 com 1 (byte)
-        MOV.B #1, R7                    ; Inicializa R7 com 1 (byte)
+reset:  MOV #1, R6                      ; Inicializa R6 com 1 (byte)
+        MOV #1, R7                      ; Inicializa R7 com 1 (byte)
+        BIC #0xFFFF, R8                 ; Limpa R8
         
         BIT #0xFFFE, R5                 ; Verifica se o bit menos significativo de R5 é 1
         JZ reset                        ; Se for 1, pule para 'reset'
@@ -55,4 +55,4 @@ diff:   MOV R5, R9                      ; Move R5 para R9
         DADD R4, R9                     ; Adiciona R4 a R9 em decimal
         SUB R4, R9                      ; Subtrai R4 de R9
 
-END                                     ; Fim do programa
+        END                             ; Fim do programa
